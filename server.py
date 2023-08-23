@@ -1,5 +1,5 @@
 from flask import jsonify,Flask
-import request
+import requests
 
 app = Flask(__name__)
 
@@ -11,12 +11,12 @@ def greeting():
         'Code':200,
         'Content':'Hello world'
     }
-    return jsonify(data) 
+    return jsonify(data)
 
 
 @app.route("/calculator/add", methods=['POST'])
 def add():
-    incoming=request.json()
+    incoming=requests.json
 
     data={
         'Status code':200,
@@ -26,7 +26,7 @@ def add():
 
 @app.route("/calculator/subtract", methods=['POST'])
 def subtract():
-    incoming=request.json()
+    incoming=requests.json_
 
     data={
         'Status code':200,
